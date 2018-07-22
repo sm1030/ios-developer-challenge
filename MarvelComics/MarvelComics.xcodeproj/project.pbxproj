@@ -41,6 +41,20 @@
 		5184121F21052D90008465DE /* GET_v1_public_comics?limit=20&offset=20 in Resources */ = {isa = PBXBuildFile; fileRef = 5184121C2105295D008465DE /* GET_v1_public_comics?limit=20&offset=20 */; };
 		5184122021052D91008465DE /* GET_v1_public_comics?limit=20&offset=0 in Resources */ = {isa = PBXBuildFile; fileRef = 5184121A2105292F008465DE /* GET_v1_public_comics?limit=20&offset=0 */; };
 		5184122121052D91008465DE /* GET_v1_public_comics?limit=20&offset=20 in Resources */ = {isa = PBXBuildFile; fileRef = 5184121C2105295D008465DE /* GET_v1_public_comics?limit=20&offset=20 */; };
+		518412232105312D008465DE /* MarvelAPIImageResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 518412222105312D008465DE /* MarvelAPIImageResponse.swift */; };
+		5184122521053AF0008465DE /* MarvelAPIImageResponseTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5184122421053AF0008465DE /* MarvelAPIImageResponseTests.swift */; };
+		5184122A21054386008465DE /* GET_u_prod_marvel_i_mg_9_90_4bb860a46f58d_portrait_medium.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 5184122621054385008465DE /* GET_u_prod_marvel_i_mg_9_90_4bb860a46f58d_portrait_medium.jpg */; };
+		5184122B21054386008465DE /* GET_u_prod_marvel_i_mg_9_90_4bb860a46f58d_portrait_medium.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 5184122621054385008465DE /* GET_u_prod_marvel_i_mg_9_90_4bb860a46f58d_portrait_medium.jpg */; };
+		5184122C21054386008465DE /* GET_u_prod_marvel_i_mg_9_90_4bb860a46f58d_portrait_medium.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 5184122621054385008465DE /* GET_u_prod_marvel_i_mg_9_90_4bb860a46f58d_portrait_medium.jpg */; };
+		5184122D21054386008465DE /* GET_u_prod_marvel_i_mg_9_90_4bb860a46f58d_portrait_uncanny.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 5184122721054385008465DE /* GET_u_prod_marvel_i_mg_9_90_4bb860a46f58d_portrait_uncanny.jpg */; };
+		5184122E21054386008465DE /* GET_u_prod_marvel_i_mg_9_90_4bb860a46f58d_portrait_uncanny.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 5184122721054385008465DE /* GET_u_prod_marvel_i_mg_9_90_4bb860a46f58d_portrait_uncanny.jpg */; };
+		5184122F21054386008465DE /* GET_u_prod_marvel_i_mg_9_90_4bb860a46f58d_portrait_uncanny.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 5184122721054385008465DE /* GET_u_prod_marvel_i_mg_9_90_4bb860a46f58d_portrait_uncanny.jpg */; };
+		5184123021054386008465DE /* GET_u_prod_marvel_i_mg_9_90_4bb860a46f58d.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 5184122821054386008465DE /* GET_u_prod_marvel_i_mg_9_90_4bb860a46f58d.jpg */; };
+		5184123121054386008465DE /* GET_u_prod_marvel_i_mg_9_90_4bb860a46f58d.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 5184122821054386008465DE /* GET_u_prod_marvel_i_mg_9_90_4bb860a46f58d.jpg */; };
+		5184123221054386008465DE /* GET_u_prod_marvel_i_mg_9_90_4bb860a46f58d.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 5184122821054386008465DE /* GET_u_prod_marvel_i_mg_9_90_4bb860a46f58d.jpg */; };
+		5184123321054386008465DE /* GET_u_prod_marvel_i_mg_9_90_4bb860a46f58d_portrait_small.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 5184122921054386008465DE /* GET_u_prod_marvel_i_mg_9_90_4bb860a46f58d_portrait_small.jpg */; };
+		5184123421054386008465DE /* GET_u_prod_marvel_i_mg_9_90_4bb860a46f58d_portrait_small.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 5184122921054386008465DE /* GET_u_prod_marvel_i_mg_9_90_4bb860a46f58d_portrait_small.jpg */; };
+		5184123521054386008465DE /* GET_u_prod_marvel_i_mg_9_90_4bb860a46f58d_portrait_small.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 5184122921054386008465DE /* GET_u_prod_marvel_i_mg_9_90_4bb860a46f58d_portrait_small.jpg */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -95,6 +109,12 @@
 		5184121821051B1B008465DE /* MarvelAPIComicsResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MarvelAPIComicsResponse.swift; sourceTree = "<group>"; };
 		5184121A2105292F008465DE /* GET_v1_public_comics?limit=20&offset=0 */ = {isa = PBXFileReference; lastKnownFileType = text; path = "GET_v1_public_comics?limit=20&offset=0"; sourceTree = "<group>"; };
 		5184121C2105295D008465DE /* GET_v1_public_comics?limit=20&offset=20 */ = {isa = PBXFileReference; lastKnownFileType = text; path = "GET_v1_public_comics?limit=20&offset=20"; sourceTree = "<group>"; };
+		518412222105312D008465DE /* MarvelAPIImageResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MarvelAPIImageResponse.swift; sourceTree = "<group>"; };
+		5184122421053AF0008465DE /* MarvelAPIImageResponseTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MarvelAPIImageResponseTests.swift; sourceTree = "<group>"; };
+		5184122621054385008465DE /* GET_u_prod_marvel_i_mg_9_90_4bb860a46f58d_portrait_medium.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = GET_u_prod_marvel_i_mg_9_90_4bb860a46f58d_portrait_medium.jpg; sourceTree = "<group>"; };
+		5184122721054385008465DE /* GET_u_prod_marvel_i_mg_9_90_4bb860a46f58d_portrait_uncanny.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = GET_u_prod_marvel_i_mg_9_90_4bb860a46f58d_portrait_uncanny.jpg; sourceTree = "<group>"; };
+		5184122821054386008465DE /* GET_u_prod_marvel_i_mg_9_90_4bb860a46f58d.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = GET_u_prod_marvel_i_mg_9_90_4bb860a46f58d.jpg; sourceTree = "<group>"; };
+		5184122921054386008465DE /* GET_u_prod_marvel_i_mg_9_90_4bb860a46f58d_portrait_small.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = GET_u_prod_marvel_i_mg_9_90_4bb860a46f58d_portrait_small.jpg; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -250,6 +270,7 @@
 				5184120F21051042008465DE /* MarvelAPIComicsResponse.swift */,
 				518411EE2104CDB3008465DE /* MarvelAPIErrorResponse.swift */,
 				518412152105135E008465DE /* MarvelAPIImage.swift */,
+				518412222105312D008465DE /* MarvelAPIImageResponse.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -302,6 +323,10 @@
 		518411F02104D331008465DE /* MockData */ = {
 			isa = PBXGroup;
 			children = (
+				5184122621054385008465DE /* GET_u_prod_marvel_i_mg_9_90_4bb860a46f58d_portrait_medium.jpg */,
+				5184122921054386008465DE /* GET_u_prod_marvel_i_mg_9_90_4bb860a46f58d_portrait_small.jpg */,
+				5184122721054385008465DE /* GET_u_prod_marvel_i_mg_9_90_4bb860a46f58d_portrait_uncanny.jpg */,
+				5184122821054386008465DE /* GET_u_prod_marvel_i_mg_9_90_4bb860a46f58d.jpg */,
 				5184120B210500F9008465DE /* GET_u_prod_marvel_i_mg_4_20_4bc697c680890.jpg */,
 				518411F12104D36E008465DE /* MarvelAPIErrorResponse */,
 				518411F32104D3F4008465DE /* GET_v1_public_comics */,
@@ -350,6 +375,7 @@
 			isa = PBXGroup;
 			children = (
 				5184121821051B1B008465DE /* MarvelAPIComicsResponse.swift */,
+				5184122421053AF0008465DE /* MarvelAPIImageResponseTests.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -458,14 +484,18 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5184122A21054386008465DE /* GET_u_prod_marvel_i_mg_9_90_4bb860a46f58d_portrait_medium.jpg in Resources */,
 				518411F52104D9F1008465DE /* MarvelAPIErrorResponse in Resources */,
 				5184121F21052D90008465DE /* GET_v1_public_comics?limit=20&offset=20 in Resources */,
 				5184120D210500FF008465DE /* GET_u_prod_marvel_i_mg_4_20_4bc697c680890.jpg in Resources */,
 				518411F62104D9F1008465DE /* GET_v1_public_comics in Resources */,
 				518411B521048292008465DE /* LaunchScreen.storyboard in Resources */,
+				5184122D21054386008465DE /* GET_u_prod_marvel_i_mg_9_90_4bb860a46f58d_portrait_uncanny.jpg in Resources */,
+				5184123321054386008465DE /* GET_u_prod_marvel_i_mg_9_90_4bb860a46f58d_portrait_small.jpg in Resources */,
 				5184121E21052D90008465DE /* GET_v1_public_comics?limit=20&offset=0 in Resources */,
 				518411B221048292008465DE /* Assets.xcassets in Resources */,
 				518411B02104828F008465DE /* Main.storyboard in Resources */,
+				5184123021054386008465DE /* GET_u_prod_marvel_i_mg_9_90_4bb860a46f58d.jpg in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -473,7 +503,11 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5184122B21054386008465DE /* GET_u_prod_marvel_i_mg_9_90_4bb860a46f58d_portrait_medium.jpg in Resources */,
+				5184122E21054386008465DE /* GET_u_prod_marvel_i_mg_9_90_4bb860a46f58d_portrait_uncanny.jpg in Resources */,
+				5184123121054386008465DE /* GET_u_prod_marvel_i_mg_9_90_4bb860a46f58d.jpg in Resources */,
 				5184120C210500F9008465DE /* GET_u_prod_marvel_i_mg_4_20_4bc697c680890.jpg in Resources */,
+				5184123421054386008465DE /* GET_u_prod_marvel_i_mg_9_90_4bb860a46f58d_portrait_small.jpg in Resources */,
 				5184121D2105295D008465DE /* GET_v1_public_comics?limit=20&offset=20 in Resources */,
 				5184121B2105292F008465DE /* GET_v1_public_comics?limit=20&offset=0 in Resources */,
 			);
@@ -483,7 +517,11 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5184122C21054386008465DE /* GET_u_prod_marvel_i_mg_9_90_4bb860a46f58d_portrait_medium.jpg in Resources */,
+				5184122F21054386008465DE /* GET_u_prod_marvel_i_mg_9_90_4bb860a46f58d_portrait_uncanny.jpg in Resources */,
+				5184123221054386008465DE /* GET_u_prod_marvel_i_mg_9_90_4bb860a46f58d.jpg in Resources */,
 				5184122121052D91008465DE /* GET_v1_public_comics?limit=20&offset=20 in Resources */,
+				5184123521054386008465DE /* GET_u_prod_marvel_i_mg_9_90_4bb860a46f58d_portrait_small.jpg in Resources */,
 				5184122021052D91008465DE /* GET_v1_public_comics?limit=20&offset=0 in Resources */,
 				5184120E21050100008465DE /* GET_u_prod_marvel_i_mg_4_20_4bc697c680890.jpg in Resources */,
 			);
@@ -500,6 +538,7 @@
 				518411E221049906008465DE /* MarvelAPI.swift in Sources */,
 				518411AD2104828F008465DE /* ViewController.swift in Sources */,
 				518412012104F6CB008465DE /* MockableURLSessionDataTask.swift in Sources */,
+				518412232105312D008465DE /* MarvelAPIImageResponse.swift in Sources */,
 				5184121021051042008465DE /* MarvelAPIComicsResponse.swift in Sources */,
 				518411EF2104CDB3008465DE /* MarvelAPIErrorResponse.swift in Sources */,
 				518412032104F6E9008465DE /* MockableURLSession.swift in Sources */,
@@ -516,6 +555,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5184122521053AF0008465DE /* MarvelAPIImageResponseTests.swift in Sources */,
 				5184121921051B1B008465DE /* MarvelAPIComicsResponse.swift in Sources */,
 				518411FD2104E707008465DE /* MD5Tests.swift in Sources */,
 				518412082104F8A2008465DE /* MockableURLSessionDataTaskTests.swift in Sources */,
