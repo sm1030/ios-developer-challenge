@@ -21,7 +21,7 @@ class MarvelAPITests: XCTestCase {
         marvelAPI = MarvelAPI()
     }
     
-    func testGetAuthenticationSignature() {
+    func testAuthenticationSignature() {
         
         /// Calculate HASH
         let timeStamp = "1"
@@ -31,7 +31,7 @@ class MarvelAPITests: XCTestCase {
         XCTAssertEqual(hash, "ffd275c5130566a2916217b101f26150")
         
         /// Calculate whole authentication string
-        let signature = MarvelAPI.getAuthenticationSignature(timeStamp: timeStamp, publicKey: publicKey, privateKey: privateKey)
+        let signature = MarvelAPI.authenticationSignature(timeStamp: timeStamp, publicKey: publicKey, privateKey: privateKey)
         XCTAssertEqual(signature, "ts=1&apikey=1234&hash=ffd275c5130566a2916217b101f26150")
     }
     
@@ -46,7 +46,7 @@ class MarvelAPITests: XCTestCase {
     }
     
     func testGetData() {
-        let urlString = "https://gateway.marvel.com/v1/public/creators"
+        let urlString = "https://gateway.marvel.com/v1/public/comics"
         let urlRequest = URLRequest(url: URL(string: urlString)!)
         let urlResponse200 = HTTPURLResponse(url: URL(string: urlString)!, statusCode: 200, httpVersion: nil, headerFields: nil)!
         let urlResponse400 = HTTPURLResponse(url: URL(string: urlString)!, statusCode: 400, httpVersion: nil, headerFields: nil)!

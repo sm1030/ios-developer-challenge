@@ -30,7 +30,7 @@ class MockableURLSessionDataTaskTests: XCTestCase {
         var error: Error?
         
         /// Default arguments
-        let goodUrlRequest = URLRequest(url: URL(string: "https://gateway.marvel.com/v1/public/creators")!)
+        let goodUrlRequest = URLRequest(url: URL(string: "https://gateway.marvel.com/v1/public/comics")!)
         let badUrlRequest = URLRequest(url: URL(string: "https://127.0.0.1/wrong/path?aaa=111")!)
         
         /// Let's group asynchrounus call and creation into this method so we can call Synchronously in one line of code
@@ -59,13 +59,13 @@ class MockableURLSessionDataTaskTests: XCTestCase {
         XCTAssertNil(error)
         
         /// Testing mockMode = stagingFile
-        createDataTaskAndCallResumeSynchronously(mockMode: .stagingFile(fileName: "GET_v1_public_creators"), urlRequest: goodUrlRequest)
+        createDataTaskAndCallResumeSynchronously(mockMode: .stagingFile(fileName: "GET_v1_public_comics"), urlRequest: goodUrlRequest)
         XCTAssertEqual((urlResponse as? HTTPURLResponse)?.statusCode, 200)
         XCTAssertEqual(data?.count,63725)
         XCTAssertNil(error)
         
         /// Testing mockMode = stagingFileWithStatusCode
-        createDataTaskAndCallResumeSynchronously(mockMode: .stagingFileWithStatusCode(fileName: "GET_v1_public_creators", statusCode: 400), urlRequest: goodUrlRequest)
+        createDataTaskAndCallResumeSynchronously(mockMode: .stagingFileWithStatusCode(fileName: "GET_v1_public_comics", statusCode: 400), urlRequest: goodUrlRequest)
         XCTAssertEqual((urlResponse as? HTTPURLResponse)?.statusCode, 400)
         XCTAssertEqual(data?.count,63725)
         XCTAssertNil(error)

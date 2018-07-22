@@ -17,14 +17,14 @@ class URLMockableTests: XCTestCase {
     func testGetStagingFileName() {
         
         /// Test WITHOUT query string
-        var urlRequest = URLRequest(url: URL(string: "https://gateway.marvel.com/v1/public/creators")!)
+        var urlRequest = URLRequest(url: URL(string: "https://gateway.marvel.com/v1/public/comics")!)
         var fileName = mockable.getStagingFileName(urlRequest: urlRequest)
-        XCTAssertEqual(fileName, "GET_v1_public_creators")
+        XCTAssertEqual(fileName, "GET_v1_public_comics")
         
         /// Test WITH query string
-        urlRequest = URLRequest(url: URL(string: "https://gateway.marvel.com/v1/public/creators?offset=20&ts=1&apikey=1234&hash=ffd275c5130566a2916217b101f26150")!)
+        urlRequest = URLRequest(url: URL(string: "https://gateway.marvel.com/v1/public/comics?offset=40&limit=20ts=1&apikey=1234&hash=ffd275c5130566a2916217b101f26150")!)
         fileName = mockable.getStagingFileName(urlRequest: urlRequest)
-        XCTAssertEqual(fileName, "GET_v1_public_creators?offset=20")
+        XCTAssertEqual(fileName, "GET_v1_public_comics?limit=20ts=1&offset=40")
         
         /// Test with urlRequest = nil
         fileName = mockable.getStagingFileName(urlRequest: nil)
@@ -46,7 +46,7 @@ class URLMockableTests: XCTestCase {
         XCTAssertNil(data)
         
         /// Test getData() from file with GOOD JSON content
-        data = mockable.getData(fileName: "GET_v1_public_creators")
+        data = mockable.getData(fileName: "GET_v1_public_comics")
         XCTAssertNotNil(data)
         
         /// Test getData() from file with GOOD JPEG content

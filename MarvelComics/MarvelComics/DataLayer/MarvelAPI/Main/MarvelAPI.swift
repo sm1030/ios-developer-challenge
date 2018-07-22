@@ -18,7 +18,7 @@ enum MarvelAPIMethods: String {
     case characters = "characters"
     
     /// Fetches lists of comics with optional filters. See notes on individual parameters below.
-    case commics = "commics"
+    case comics = "comics"
     
     /// Fetches lists of comic creators with optional filters. See notes on individual parameters below.
     case creators = "creators"
@@ -27,7 +27,8 @@ enum MarvelAPIMethods: String {
 class MarvelAPI {
     
     /// Marvel API base url
-    let baseURL = "https://gateway.marvel.com:443/v1/public/"
+    /// - important: It is VAR because I need to change it for better UnitTest code coverage
+    var baseURL = "https://gateway.marvel.com/v1/public/"
     
     /// Change mockMode property to enable/disable data mocking. Really helps with UnitTesting
     var mockableURLSession = MockableURLSession()
@@ -39,7 +40,7 @@ class MarvelAPI {
      - parameter privateKey: (Optional) PrivateKey used for UnitTesting
      - returns: Authentication string
      */
-    static func getAuthenticationSignature(timeStamp: String = String(Int(Date().timeIntervalSince1970)),
+    static func authenticationSignature(timeStamp: String = String(Int(Date().timeIntervalSince1970)),
                                            publicKey: String = SecretConstants.marvelApiPublicKey,
                                            privateKey: String = SecretConstants.marvelApiPrivateKey) -> String {
         let hash = MD5( timeStamp + privateKey + publicKey ).lowercased()

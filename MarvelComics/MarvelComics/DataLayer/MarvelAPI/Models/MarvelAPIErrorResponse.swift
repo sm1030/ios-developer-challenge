@@ -13,7 +13,7 @@ import Foundation
  */
 struct MarvelAPIErrorResponse: Decodable {
     
-    /// Error code text ?!? :-)
+    /// Error code text ?!? Do not ask me why this "code" is String and returns TEXT DESCRIPTION!   :-)
     var code: String
     
     /// Error message
