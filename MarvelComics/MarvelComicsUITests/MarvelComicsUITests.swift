@@ -31,6 +31,19 @@ class MarvelComicsUITests: XCTestCase {
     func testExample() {
         // Use recording to get started writing UI tests.
         // Use XCTAssert and related functions to verify your tests produce the correct results.
+        
+        
+        let app = XCUIApplication()
+        let element = app.collectionViews.children(matching: .cell).element(boundBy: 0).children(matching: .other).element
+        element.tap()
+        
+        let image = app.children(matching: .window).element(boundBy: 0).children(matching: .other).element.children(matching: .other).element.children(matching: .image).element
+        image.swipeDown()
+        XCUIDevice.shared.orientation = .landscapeLeft
+        element.tap()
+        image.swipeLeft()
+        XCUIDevice.shared.orientation = .portrait
+
     }
     
 }
