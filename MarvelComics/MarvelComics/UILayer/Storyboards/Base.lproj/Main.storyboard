@@ -1,24 +1,108 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13122.16" systemVersion="17A277" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14113" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13104.12"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
+        <!--Comics List View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="ComicsListViewController" customModule="MarvelComics" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="Ach-zy-7vf">
+                                <rect key="frame" x="0.0" y="20" width="375" height="647"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <collectionViewFlowLayout key="collectionViewLayout" scrollDirection="horizontal" minimumLineSpacing="5" minimumInteritemSpacing="5" id="TAO-Xy-aaj">
+                                    <size key="itemSize" width="100" height="150"/>
+                                    <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                                    <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                                    <inset key="sectionInset" minX="5" minY="5" maxX="5" maxY="5"/>
+                                </collectionViewFlowLayout>
+                                <cells>
+                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="ComicsCell" id="4pA-9n-HNp" customClass="ComicsCell" customModule="MarvelComics" customModuleProvider="target">
+                                        <rect key="frame" x="5" y="5" width="100" height="150"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO">
+                                            <rect key="frame" x="0.0" y="0.0" width="100" height="150"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="bzU-Zn-GsO" userLabel="ComicsImageView">
+                                                    <rect key="frame" x="0.0" y="0.0" width="100" height="150"/>
+                                                    <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
+                                                </imageView>
+                                                <activityIndicatorView hidden="YES" opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" hidesWhenStopped="YES" style="whiteLarge" translatesAutoresizingMaskIntoConstraints="NO" id="iZM-S7-anB" userLabel="ComicsImageActivityIndicator">
+                                                    <rect key="frame" x="32" y="56.5" width="37" height="37"/>
+                                                    <color key="color" red="0.26971409699999999" green="1" blue="0.33323934859999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                </activityIndicatorView>
+                                            </subviews>
+                                        </view>
+                                        <constraints>
+                                            <constraint firstAttribute="trailing" secondItem="bzU-Zn-GsO" secondAttribute="trailing" id="4YX-k3-iqp"/>
+                                            <constraint firstAttribute="bottom" secondItem="bzU-Zn-GsO" secondAttribute="bottom" id="ADR-v5-cVr"/>
+                                            <constraint firstItem="iZM-S7-anB" firstAttribute="centerY" secondItem="4pA-9n-HNp" secondAttribute="centerY" id="CrJ-th-Q45"/>
+                                            <constraint firstItem="iZM-S7-anB" firstAttribute="centerX" secondItem="4pA-9n-HNp" secondAttribute="centerX" id="dZr-rk-8SA"/>
+                                            <constraint firstItem="bzU-Zn-GsO" firstAttribute="leading" secondItem="4pA-9n-HNp" secondAttribute="leading" id="uAn-f0-PvL"/>
+                                            <constraint firstItem="bzU-Zn-GsO" firstAttribute="top" secondItem="4pA-9n-HNp" secondAttribute="top" id="wzG-qo-yUx"/>
+                                        </constraints>
+                                        <size key="customSize" width="100" height="150"/>
+                                        <connections>
+                                            <outlet property="comicsImageActivityIndicator" destination="iZM-S7-anB" id="wqp-Wa-u40"/>
+                                            <outlet property="comicsImageView" destination="bzU-Zn-GsO" id="7Sl-6x-G28"/>
+                                        </connections>
+                                    </collectionViewCell>
+                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="ActivityCell" id="0YD-ZE-Y1J" customClass="ActivityCell" customModule="MarvelComics" customModuleProvider="target">
+                                        <rect key="frame" x="5" y="167.5" width="100" height="150"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO">
+                                            <rect key="frame" x="0.0" y="0.0" width="100" height="150"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" hidesWhenStopped="YES" animating="YES" style="whiteLarge" translatesAutoresizingMaskIntoConstraints="NO" id="eqJ-Gh-PCf">
+                                                    <rect key="frame" x="32" y="56.5" width="37" height="37"/>
+                                                    <color key="color" red="1" green="0.57637232540000005" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                </activityIndicatorView>
+                                            </subviews>
+                                        </view>
+                                        <constraints>
+                                            <constraint firstItem="eqJ-Gh-PCf" firstAttribute="centerX" secondItem="0YD-ZE-Y1J" secondAttribute="centerX" id="MEA-l6-LGq"/>
+                                            <constraint firstItem="eqJ-Gh-PCf" firstAttribute="centerY" secondItem="0YD-ZE-Y1J" secondAttribute="centerY" id="gjX-mK-aXI"/>
+                                        </constraints>
+                                        <connections>
+                                            <outlet property="activityIndicator" destination="eqJ-Gh-PCf" id="uqk-ZR-BrC"/>
+                                        </connections>
+                                    </collectionViewCell>
+                                </cells>
+                                <connections>
+                                    <outlet property="dataSource" destination="BYZ-38-t0r" id="veh-b6-IBb"/>
+                                    <outlet property="delegate" destination="BYZ-38-t0r" id="s7O-rF-HlD"/>
+                                </connections>
+                            </collectionView>
+                        </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="Ach-zy-7vf" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="boi-aJ-nkD"/>
+                            <constraint firstItem="Ach-zy-7vf" firstAttribute="bottom" secondItem="6Tk-OE-BBY" secondAttribute="bottom" id="dpf-ni-SB0"/>
+                            <constraint firstItem="Ach-zy-7vf" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="jaS-j2-VUX"/>
+                            <constraint firstItem="Ach-zy-7vf" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="mLv-F0-3gD"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
+                    <connections>
+                        <outlet property="collectionView" destination="Ach-zy-7vf" id="Vec-0T-0wM"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="140" y="132.68365817091455"/>
         </scene>
     </scenes>
 </document>

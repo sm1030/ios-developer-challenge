@@ -53,7 +53,7 @@ class MarvelAPIImageResponseTests: XCTestCase {
         XCTAssertEqual(imageResponse?.size.width, 50)
         XCTAssertEqual(imageResponse?.size.height, 75)
         
-        /// Test with SMALL image
+        /// Test with MEDIUM image
         marvelAPI = MarvelAPI()
         marvelAPI.mockableURLSession.mockMode = .automaticStagingFile
         getImageSynchronously(imagePath: imagePath, imageExtension: imageExtension, sizeVariant: .portraitMedium)
@@ -62,7 +62,7 @@ class MarvelAPIImageResponseTests: XCTestCase {
         XCTAssertEqual(imageResponse?.size.width, 100)
         XCTAssertEqual(imageResponse?.size.height, 171)
         
-        /// Test with SMALL image
+        /// Test with UNCANNY image
         marvelAPI = MarvelAPI()
         marvelAPI.mockableURLSession.mockMode = .automaticStagingFile
         getImageSynchronously(imagePath: imagePath, imageExtension: imageExtension, sizeVariant: .portraitUncanny)
@@ -71,7 +71,7 @@ class MarvelAPIImageResponseTests: XCTestCase {
         XCTAssertEqual(imageResponse?.size.width, 300)
         XCTAssertEqual(imageResponse?.size.height, 450)
         
-        /// Test with SMALL image
+        /// Test with FULL SIZE image
         marvelAPI = MarvelAPI()
         marvelAPI.mockableURLSession.mockMode = .automaticStagingFile
         getImageSynchronously(imagePath: imagePath, imageExtension: imageExtension, sizeVariant: .fullSize)
