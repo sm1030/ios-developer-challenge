@@ -55,6 +55,8 @@
 		5184123321054386008465DE /* GET_u_prod_marvel_i_mg_9_90_4bb860a46f58d_portrait_small.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 5184122921054386008465DE /* GET_u_prod_marvel_i_mg_9_90_4bb860a46f58d_portrait_small.jpg */; };
 		5184123421054386008465DE /* GET_u_prod_marvel_i_mg_9_90_4bb860a46f58d_portrait_small.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 5184122921054386008465DE /* GET_u_prod_marvel_i_mg_9_90_4bb860a46f58d_portrait_small.jpg */; };
 		5184123521054386008465DE /* GET_u_prod_marvel_i_mg_9_90_4bb860a46f58d_portrait_small.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 5184122921054386008465DE /* GET_u_prod_marvel_i_mg_9_90_4bb860a46f58d_portrait_small.jpg */; };
+		51841238210546AE008465DE /* CacheAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 51841237210546AE008465DE /* CacheAPI.swift */; };
+		5184123F210552E3008465DE /* CacheAPIImageResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5184123B210546C8008465DE /* CacheAPIImageResponse.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -115,6 +117,8 @@
 		5184122721054385008465DE /* GET_u_prod_marvel_i_mg_9_90_4bb860a46f58d_portrait_uncanny.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = GET_u_prod_marvel_i_mg_9_90_4bb860a46f58d_portrait_uncanny.jpg; sourceTree = "<group>"; };
 		5184122821054386008465DE /* GET_u_prod_marvel_i_mg_9_90_4bb860a46f58d.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = GET_u_prod_marvel_i_mg_9_90_4bb860a46f58d.jpg; sourceTree = "<group>"; };
 		5184122921054386008465DE /* GET_u_prod_marvel_i_mg_9_90_4bb860a46f58d_portrait_small.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = GET_u_prod_marvel_i_mg_9_90_4bb860a46f58d_portrait_small.jpg; sourceTree = "<group>"; };
+		51841237210546AE008465DE /* CacheAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CacheAPI.swift; sourceTree = "<group>"; };
+		5184123B210546C8008465DE /* CacheAPIImageResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CacheAPIImageResponse.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -195,6 +199,7 @@
 		518411D82104837F008465DE /* DataLayer */ = {
 			isa = PBXGroup;
 			children = (
+				518412362105468A008465DE /* CacheAPI */,
 				518411E52104B1B2008465DE /* Helpers */,
 				518411DE21049871008465DE /* MarvelAPI */,
 			);
@@ -380,6 +385,15 @@
 			path = Models;
 			sourceTree = "<group>";
 		};
+		518412362105468A008465DE /* CacheAPI */ = {
+			isa = PBXGroup;
+			children = (
+				51841237210546AE008465DE /* CacheAPI.swift */,
+				5184123B210546C8008465DE /* CacheAPIImageResponse.swift */,
+			);
+			path = CacheAPI;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -536,9 +550,11 @@
 			files = (
 				518411F92104E3AA008465DE /* MD5.swift in Sources */,
 				518411E221049906008465DE /* MarvelAPI.swift in Sources */,
+				51841238210546AE008465DE /* CacheAPI.swift in Sources */,
 				518411AD2104828F008465DE /* ViewController.swift in Sources */,
 				518412012104F6CB008465DE /* MockableURLSessionDataTask.swift in Sources */,
 				518412232105312D008465DE /* MarvelAPIImageResponse.swift in Sources */,
+				5184123F210552E3008465DE /* CacheAPIImageResponse.swift in Sources */,
 				5184121021051042008465DE /* MarvelAPIComicsResponse.swift in Sources */,
 				518411EF2104CDB3008465DE /* MarvelAPIErrorResponse.swift in Sources */,
 				518412032104F6E9008465DE /* MockableURLSession.swift in Sources */,

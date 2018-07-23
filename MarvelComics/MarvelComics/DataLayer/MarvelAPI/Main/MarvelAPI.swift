@@ -26,6 +26,9 @@ enum MarvelAPIMethods: String {
 
 class MarvelAPI {
     
+    /// Shared instance of MarvelAPI class
+    static let shared = MarvelAPI()
+    
     /// Marvel API base url
     /// - important: It is VAR because I need to change it for better UnitTest code coverage
     var baseURL = "https://gateway.marvel.com/v1/public/"
