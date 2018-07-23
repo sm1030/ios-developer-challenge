@@ -15,6 +15,7 @@ class ComicsCell: UICollectionViewCell {
     
     var observingImageNotification = false
     var comicImagePath: String?
+    var comicImageSizeVariant: MarvelAPIImageSizeVariant = .portraitXlarge
     
     var comic: MarvelAPIComic? {
         didSet {
@@ -24,7 +25,8 @@ class ComicsCell: UICollectionViewCell {
                 subscribeForImageUpdatesIfNeeded()
                 comicsImageActivityIndicator.startAnimating()
                 comicImagePath = imagePath
-                _ = CacheAPI.shared.requestImage(imagePath: imagePath, imageExtension: imageExtension, sizeVariant: .portraitMedium)
+                comicImageSizeVariant = UIScreen.main.bounds.height > UIScreen.main.bounds.width ? .portraitXlarge : .portraitUncanny
+                _ = CacheAPI.shared.requestImage(imagePath: imagePath, imageExtension: imageExtension, sizeVariant: comicImageSizeVariant)
             } else {
                 comicsImageActivityIndicator.stopAnimating()
                 comicsImageView.image = #imageLiteral(resourceName: "image_not_available_portrait_medium")
@@ -48,7 +50,7 @@ class ComicsCell: UICollectionViewCell {
             observingImageNotification = true
             NotificationCenter.default.addObserver(forName: CacheAPI.imageNotification, object: nil, queue: OperationQueue.main) { [weak self] (notification) in
                 if let imageResponse = notification.object as? CacheAPIImageResponse {
-                    if let requestedImagePath = self?.comicImagePath, requestedImagePath == imageResponse.imagePath {
+                    if let requestedImagePath = self?.comicImagePath, let comicImageSizeVariant = self?.comicImageSizeVariant, requestedImagePath == imageResponse.imagePath && imageResponse.sizeVariant == comicImageSizeVariant {
                         self?.comicsImageActivityIndicator.stopAnimating()
                         if let image = imageResponse.image {
                             self?.comicsImageView?.image = image

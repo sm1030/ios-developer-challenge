@@ -98,11 +98,20 @@
                     </view>
                     <connections>
                         <outlet property="collectionView" destination="Ach-zy-7vf" id="Vec-0T-0wM"/>
+                        <segue destination="ALE-Ub-FPz" kind="presentation" identifier="PresentComicsDetails" id="Mf6-DF-SG6"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="140" y="132.68365817091455"/>
+        </scene>
+        <!--ComicsDetails-->
+        <scene sceneID="G0n-rL-CGo">
+            <objects>
+                <viewControllerPlaceholder storyboardName="ComicsDetails" id="ALE-Ub-FPz" sceneMemberID="viewController"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="jxi-bQ-ot0" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="788" y="132"/>
         </scene>
     </scenes>
 </document>

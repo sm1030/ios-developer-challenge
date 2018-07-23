@@ -22,6 +22,12 @@ enum MarvelAPIImageSizeVariant: String {
     /// 100x150px
     case portraitMedium = "/portrait_medium."
     
+    /// 150x225px
+    case portraitXlarge = "/portrait_xlarge."
+    
+    /// 168x252px
+    case portraitFantastic = "/portrait_fantastic."
+    
     /// 300x450px
     case portraitUncanny = "/portrait_uncanny."
 }

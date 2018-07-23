@@ -30,12 +30,18 @@ class ComicsListViewController: UIViewController {
     deinit {
         NotificationCenter.default.removeObserver(self)
     }
+    
+    override func viewWillTransition(to size: CGSize, with coordinator: UIViewControllerTransitionCoordinator) {
+        super.viewWillTransition(to: size, with: coordinator)
+        collectionView.reloadData()
+    }
 }
 
 extension ComicsListViewController: UICollectionViewDelegateFlowLayout {
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
-        let cellHeight = (collectionView.frame.height / 3) - 10
+        let cellPerColumn: CGFloat = view.frame.height > view.frame.width ? 3 : 1
+        let cellHeight = (collectionView.frame.height / cellPerColumn) - 10
         let cellWidth = cellHeight / 1.5
         return CGSize(width: cellWidth, height: cellHeight)
     }
@@ -67,5 +73,15 @@ extension ComicsListViewController: UICollectionViewDataSource {
         
         /// And if something is terrebly wrong then just return new empty cell
         return UICollectionViewCell()
+    }
+}
+
+extension ComicsListViewController: UICollectionViewDelegate {
+    
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        if comicsList.count > indexPath.row {
+            ComicsManager.shared.selectedComics = comicsList[indexPath.row]
+        }
+        performSegue(withIdentifier: "PresentComicsDetails", sender: self)
     }
 }
